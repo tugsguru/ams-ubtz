@@ -45,6 +45,7 @@ public class DocumentSyncController {
         return ResponseEntity.ok("Таталт, хадгалалт дууслаа.");
     }*/
     
+    //download start
     @GetMapping("/download/start")
     public ResponseEntity<String> syncFileDownload() {
     	ams.mn.ubtz.doc.service.impl.FileSyncServiceImpl.SyncResult result = fileSyncService.syncFilesFromRemote();
