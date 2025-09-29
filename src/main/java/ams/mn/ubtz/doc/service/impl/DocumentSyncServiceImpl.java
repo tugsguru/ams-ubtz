@@ -72,7 +72,7 @@ public class DocumentSyncServiceImpl implements DocumentSyncService {
     private static final Logger log = LoggerFactory.getLogger(DocumentSyncServiceImpl.class);
 
     @Override
-    public SyncResult syncAllFromRemote() {
+    public SyncResult syncAllFromRemoteDoc() {
         int page = 0;
         int size = 1000;
 

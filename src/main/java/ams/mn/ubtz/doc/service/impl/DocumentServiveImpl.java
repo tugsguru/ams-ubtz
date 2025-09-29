@@ -383,7 +383,7 @@ public class DocumentServiveImpl implements DocumentService {
 	    String sql = "SELECT n.kid, n.tid, n.n FROM tushaal t " +
 	                 "LEFT JOIN users u ON t.t7 = u.uid " +
 	                 "INNER JOIN t_name n ON n.tid = t.npid " +
-	                 "WHERE u.org >= 7739 AND t.t2 < '2017-01-01' " +
+	                 "WHERE (u.org >= 7739 OR u.org = 7663) AND t.t2 < '2015-01-01' " +
 	                 "ORDER BY n.kid " +
 	                 "OFFSET ? ROWS FETCH NEXT ? ROWS ONLY";
 
@@ -422,7 +422,7 @@ public class DocumentServiveImpl implements DocumentService {
 	                 "FROM unit u " +
 	                 "LEFT JOIN opus o ON u.oid = o.oid " +
 	                 "LEFT JOIN fund f ON o.fid = f.fid " +
-	                 "WHERE f.f8 > 7738 " +
+	                 "WHERE f.f8 > 7738 OR f.f8 = 7663" +
 	                 "ORDER BY u.uid " +
 	                 "OFFSET ? ROWS FETCH NEXT ? ROWS ONLY";
 

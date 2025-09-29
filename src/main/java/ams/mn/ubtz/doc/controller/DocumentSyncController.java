@@ -20,7 +20,7 @@ public class DocumentSyncController {
 
     @GetMapping("/doc/start")
     public ResponseEntity<String> sync() {
-        SyncResult result = documentSyncService.syncAllFromRemote();
+        SyncResult result = documentSyncService.syncAllFromRemoteDoc();
         return ResponseEntity.ok(
             " Шинээр нэмэгдсэн: " + result.getInserted() +
             ", Шинэчлэгдсэн: " + result.getUpdated()

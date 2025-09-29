@@ -4,7 +4,7 @@ import ams.mn.ubtz.doc.service.impl.DocumentSyncServiceImpl.SyncResult;
 
 public interface DocumentSyncService {
 
-	SyncResult syncAllFromRemote();
+	SyncResult syncAllFromRemoteDoc();
 	void syncAllFromRemoteTname();
 	int syncAllFromRemoteDelo();
 	
